@@ -9,6 +9,7 @@ import CrocantiPedido from './pages/CrocantiPedido.jsx';
 import CrocantiPanel from './pages/CrocantiPanel.jsx';
 import ErpDemo from './pages/ErpDemo.jsx';
 import ErpPanel from './pages/ErpPanel.jsx';
+import Encabezado from './components/Encabezado.jsx';
 
 // Guarda de ruta: sin sesión -> /login; sin el rol del módulo -> /
 function Privada({ modulo, rol, children }) {
@@ -23,6 +24,7 @@ export default function App() {
     <>
       <Navbar />
       <main className="contenedor">
+        <Encabezado />
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/" element={<Privada><Inicio /></Privada>} />

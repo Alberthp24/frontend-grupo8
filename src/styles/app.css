@@ -38,3 +38,21 @@ th,td{padding:9px;border:1px solid var(--bd);text-align:left}th{background:#e7ef
 .paso{background:#fff;border:1px dashed var(--v2);border-radius:12px;padding:16px}
 .paso span{display:inline-flex;width:28px;height:28px;border-radius:50%;background:var(--v2);color:#fff;align-items:center;justify-content:center;font-weight:700;margin-bottom:6px}
 .paso p{margin:4px 0 0;color:#44544a;font-size:.92rem}
+
+.banner{display:flex;gap:16px;align-items:center;background:linear-gradient(135deg,#0f3d24,#16a34a);color:#fff;border-radius:14px;padding:22px 26px;margin-bottom:20px}
+.banner .sigla{width:56px;height:56px;border-radius:12px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);display:flex;align-items:center;justify-content:center;font-weight:700;flex-shrink:0}
+.banner small{text-transform:uppercase;letter-spacing:.12em;opacity:.8}
+.banner h1{margin:2px 0 4px;font-size:1.6rem}
+.banner p{margin:0;opacity:.92}
+.contenedor .tarjeta:not(.login)>h2:first-child,.contenedor section>h2:first-child{display:none}
+.tarjeta{box-shadow:0 2px 10px rgba(15,61,36,.06)}
+.login{border-top:5px solid var(--v2);box-shadow:0 10px 30px rgba(15,61,36,.12)}
+.tabla-wrap{border:1px solid var(--bd);border-radius:12px;overflow-x:auto;background:#fff}
+th,td{border:0;border-bottom:1px solid var(--bd)}
+th{background:#e7efe9;color:var(--v)}
+tbody tr:nth-child(even){background:#f7faf8}
+tbody tr:hover{background:#eef6f0}
+h3{color:var(--v);margin:24px 0 10px}
+input:focus,select:focus{outline:2px solid #86d19f;border-color:var(--v2)}
+button:hover{filter:brightness(.92)}
+.navbar{position:sticky;top:0;z-index:5;box-shadow:0 2px 8px rgba(0,0,0,.2)}

@@ -9,6 +9,7 @@ export default function PanelAcciones({ titulo, ruta, columnas, accion }) {
   const { datos, cargando, error, recargar } = useLista(ruta);
   const [msg, setMsg] = useState('');
   const [fallo, setFallo] = useState('');
+  const pendientes = datos.filter((f) => f.estado === accion.cuando).length;
 
   const ejecutar = async (id) => {
     try { await api.put(accion.rutaPut(id)); setMsg('Estado actualizado'); setFallo(''); recargar(); }
@@ -18,6 +19,10 @@ export default function PanelAcciones({ titulo, ruta, columnas, accion }) {
   return (
     <section>
       <h2>{titulo}</h2>
+      <div className="stats">
+        <div className="stat">Total de registros<b>{datos.length}</b></div>
+        <div className="stat">Pendientes de acción<b>{pendientes}</b></div>
+      </div>
       <Aviso>{msg}</Aviso><Aviso tipo="error">{error || fallo}</Aviso>
       {cargando ? <p>Cargando…</p> : (
         <div className="tabla-wrap"><table>
